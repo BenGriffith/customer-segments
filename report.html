@@ -11845,6 +11845,18 @@ div#notebook {
 <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\bengr\Anaconda3\lib\site-packages\sklearn\cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Wholesale customers dataset has 440 samples with 6 features each.
 </pre>
@@ -11867,7 +11879,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12010,7 +12022,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12141,8 +12153,8 @@ div#notebook {
 <p><strong>Answer:</strong></p>
 <p>What kind of establishment could each of the three samples chosen represent?</p>
 <ul>
-<li>Customer 0: Compared to the restaurant mean values, this establishment spent significantly more in the Fresh and Frozen product categories and significantly less in the Grocery and Detergents_Paper product categories. Because of the difference in spending, I am led to think this establishment might be a deli or deli / cafe hybrid.</li>
-<li>Customer 1: This customer spends more than the restaurant in all of the product categories except Fresh and Delicatessen. However, this establishment is nowhere near the spending level of Customer 2 so I am led to believe that this customer might be a market or grocery store. </li>
+<li>Customer 0: Compared to the mean values, this establishment spent significantly more in the Fresh and Frozen product categories and significantly less in the Grocery and Detergents_Paper product categories. Because of the difference in spending, I am led to think this establishment might be a deli or deli / cafe hybrid.</li>
+<li>Customer 1: This customer spends more in all of the product categories except Fresh and Delicatessen. However, this establishment is nowhere near the spending level of Customer 2 so I am led to believe that this customer might be a market or grocery store. </li>
 <li>Customer 2: With the exception of the Frozen product category, this customer spent significantly more than Customer 0 and Customer 1. In addition, this establishment also spent a substantial amount in the Grocery and Detergents_Paper product categories. For these reasons, I think this customer could be a wholesale retailer.</li>
 </ul>
 
@@ -12170,7 +12182,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12354,7 +12366,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x24cbabdbcf8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2807bbd0400&gt;</pre>
 </div>
 
 </div>
@@ -13830,7 +13842,7 @@ Fresh, Delicatessen, Frozen and Detergents_Paper features are best represented i
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x24cba525470&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2807c1d7240&gt;</pre>
 </div>
 
 </div>
@@ -14237,34 +14249,52 @@ Fresh, Delicatessen, Frozen and Detergents_Paper features are best represented i
 <p><strong>Answer:</strong></p>
 <table>
 <thead><tr>
-<th>-</th>
+<th>Feature</th>
+<th>Mean</th>
 <th>Segment 0</th>
 <th>Segment 1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Establishments</td>
-<td>Deli</td>
-<td>Market</td>
+<td>Fresh</td>
+<td>12000.3</td>
+<td>5424.0</td>
+<td>9451.0</td>
 </tr>
 <tr>
-<td></td>
-<td>Cafe</td>
-<td>Wholesale Retailer</td>
+<td>Milk</td>
+<td>5796.3</td>
+<td>7780.0</td>
+<td>1938.0</td>
 </tr>
 <tr>
-<td></td>
-<td>Diner</td>
-<td>Convenience Store</td>
+<td>Grocery</td>
+<td>7951.3</td>
+<td>11532.0</td>
+<td>2449.0  </td>
 </tr>
 <tr>
-<td></td>
-<td>Restaurant (small)</td>
-<td>Restaurant (mid to large) </td>
+<td>Frozen</td>
+<td>3071.9</td>
+<td>1123.0</td>
+<td>2200.0</td>
+</tr>
+<tr>
+<td>Detergents_Paper</td>
+<td>2881.5</td>
+<td>4444.0</td>
+<td>307.0</td>
+</tr>
+<tr>
+<td>Delicatessen</td>
+<td>1524.9</td>
+<td>1136.0</td>
+<td>771.0</td>
 </tr>
 </tbody>
 </table>
+<p>Comparing Customer Segment 0 values with the Mean values for each feature, Customer Segment 0 could include establishments such as market, wholesale retailer, convenience store and possibly restaurants (medium to large sized). As for Customer Segment 1, I think it could include establishments such as deli, cafe, diner and possibly restaurants (small sized).</p>
 
 </div>
 </div>
@@ -14284,7 +14314,7 @@ Fresh, Delicatessen, Frozen and Detergents_Paper features are best represented i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -14332,25 +14362,29 @@ Sample point 2 predicted to be in Cluster 0
 <tbody>
 <tr>
 <td>Sample point 0</td>
-<td>X</td>
 <td>-</td>
+<td>X</td>
 <td></td>
 </tr>
 <tr>
 <td>Sample point 1</td>
-<td>-</td>
 <td>X</td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>
 <td>Sample point 2</td>
-<td>-</td>
 <td>X</td>
+<td>-</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p>Yes, the predictions for each sample point are consistent.</p>
+<p>For sample point 0, the values for Fresh and Frozen are above average while the values for Milk, Grocery and Detergents_Paper are below average for customer segment 1. Delicatessen is near average for customer segment 1.</p>
+<p>For sample point 1, the values for Milk, Grocery, Frozen and Detergents_Paper are above average while the value for Fresh is below average for customer segment 0. Delicatessen is near average for customer segment 0.</p>
+<p>For sample point 2, the values for Fresh, Milk, Grocery and Detergents_Paper are above average while the value for Delicatessen is below average for customer segment 0. Frozen is near average for customer segment 0.</p>
+<p>Since Delicatessen and Frozen are near average for the sample points and predicted clusters just referenced, the predicted cluster seems to be consistent with category spending of the sample points.</p>
 
 </div>
 </div>
@@ -14390,9 +14424,9 @@ Sample point 2 predicted to be in Cluster 0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>I don't think we can assume a delivery service change affects all customers equally. For example, establishments in customer segment 0 do not purchase nearly as much as the customer segment 1 establishments do. Therefore, while every customer is very important to the wholesale distributor, I think the wholesale distributor would recognize that a change in delivery service for its higher paying customers might have a higher negative impact than establishments in customer segment 0.</p>
-<p>To determine which group of customers a delivery change would impact the most A/B testing could be used. For example, version A could be the existing delivery service (5 days a week) and versio B could be the alternative delivery service (3 days a week) being tested. Depending on A/B testing, we can see which customers react positively to the 3 days a week delivery service.</p>
-<p>I think this A/B testing could be applied to all segments collectively.</p>
+<p>I think it would be a mistake to assume a delivery service change affects all customers equally.</p>
+<p>A/B testing could be used for each customer segment to determine which group of customers a delivery change would affect the most.</p>
+<p>For example, customer segment 0 and customer segment 1 could implement independent A/B testing. Customer segment 0 and customer segment 1 could be broken down into two sub-groups. One sub-group, Version A, would be the existing delivery service (five days a week) and the other sub-group, Version B, would be the alternative / new delivery service (three days a week). After a period of time doing A/B testing, the level of consumption for each establishment could be analyzed and conclusions could be made as to whether the change in delivery service was positive or not.</p>
 
 </div>
 </div>
@@ -14432,7 +14466,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
@@ -14487,7 +14521,7 @@ Sample point 2 predicted to be in Cluster 0
 <ul>
 <li><p>I think the clustering algorithm and number of clusters I've chosen compares relatively well to the underlying distribution. There seem to be a few difference in individual data points being in one cluster versus the other, but the algorithm I chose produced two clusters (like above) and a lot of similarity in the clustering above of individual points.</p>
 </li>
-<li><p>Yes, I think there are customer segments that could be classified as purely 'Retailers' or 'Hotels/Restaurants/Cafes' and I would consider these classifications to have a level of consistency with my previous definition of customer segments. For example, I had classified establishments such as market, wholesale retailer and convenience store as customer sement 1 (or cluster 1) and these are basically retailers. For customer segment 0, I listed establishments such as deli, cafe, restaurant, but I did not include Hotel.</p>
+<li><p>Yes, I think there are customer segments that could be classified as purely 'Retailers' or 'Hotels/Restaurants/Cafes' and I would consider these classifications to have a level of consistency with my previous definition of customer segments. For example, I had classified establishments such as market, wholesale retailer and convenience store as customer sement 0 (or cluster 0) and these are basically retailers. For customer segment 1, I listed establishments such as deli, cafe, restaurant, but I did not include Hotel.</p>
 </li>
 </ul>
 
