@@ -1,3 +1,3 @@
-# customer_segments
+# customer-segments
 
 Third Project for Udacity Machine Learning Nanodegree
